@@ -1,0 +1,42 @@
+
+<view class="item">
+  <textarea 
+    placeholder="这是默认的多行文本框，会有穿透的副作用"
+    class="textarea"
+  />
+</view>
+<view class="item">
+  <multiline 
+    wrap-class="wrap"
+    textarea-class="textarea"
+    placeholder-class="placeholder"
+    placeholder="这是自定义的文本框，没有穿透副作用" 
+
+  />
+</view>
+<button bindtap="handleTap" type="primary">点击测试穿透效果</button>
+<view class="mask" hidden="{{!showMask}}">
+  <view class="title">这里是一个fixed层</view>
+  <button bindtap="close">关闭遮罩</button>
+  <view class="popup">
+    <view style="padding: 30rpx;text-align: center">滚动页面查看效果</view>
+    <view class="item">
+      <textarea 
+        placeholder="这是默认的多行文本框，滚动错位"
+        class="textarea"
+      />
+    </view>
+    <view class="item">
+      <multiline 
+        wrap-class="wrap"
+        textarea-class="textarea"
+        placeholder-class="placeholder"
+        placeholder="这是自定义的文本框，滚动不错位" 
+
+      />
+    </view>
+  </view>
+</view>
+  
+
+  

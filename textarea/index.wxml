@@ -1,0 +1,33 @@
+<view class="wrap wrap-class">
+  <view 
+    class="placeholder placeholder-class" 
+    style="{{placeholder-style}}" hidden="{{value}}"
+  >{{placeholder}}</view>
+  <textarea 
+    wx:if="{{showTextArea}}"
+    class="textarea textarea-class"
+    value="{{value}}" 
+    disabled="{{disabled}}"
+    maxlength="{{maxlength}}" 
+    auto-focus="{{autoFocus}}" 
+    disable-default-padding="true"
+    focus="{{focus}}" 
+    fixed="{{fixed}}"
+    auto-height="{{auto-height}}" 
+    bindinput="handleInput" 
+    bindfocus="handleFocus" 
+    bindblur="handleBlur" 
+    bindconfirm="{{handleConfirm}}"
+    bindkeyboardheightchange="bindkeyboardheightchange"
+    style="{{textarea-style}}"
+  /> 
+  <view wx:else 
+    class="content textarea-class" 
+    bindtap="handleTap"
+    style="{{virtual-textarea-style}}"
+  >
+    {{value}}
+  </view>
+</view>
+  
+  
